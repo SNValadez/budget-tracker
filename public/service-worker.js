@@ -6,11 +6,7 @@ const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
   "./index.html",
-  "./events.html",
-  "./tickets.html",
-  "./schedule.html",
-  "./assets/css/style.css",
-  "./css/styles.css",
+   "./css/styles.css",
   "./icons/icon-96x96.png",
   "./icons/icon-72x72.png",
   "./icons/icon-128x128.png",
