@@ -22,6 +22,9 @@ const FILES_TO_CACHE = [
 
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
+  if (e.request.url.includes("/api/")) {
+
+  
     console.log('fetch request : ' + e.request.url)
     e.respondWith(
       caches.match(e.request).then(function (request) {
@@ -36,7 +39,7 @@ self.addEventListener('fetch', function (e) {
         }
       })
     )
-  })
+  }})
 
   self.addEventListener('install', function (e) {
     e.waitUntil(
