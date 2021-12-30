@@ -39,10 +39,10 @@ function saveRecord(record) {
   const transaction = db.transaction(["new_budget"], "readwrite");
 
   // access the object store for `new_budget`
-  const pizzaObjectStore = transaction.objectStore("new_budget");
+  const budgetObjectStore = transaction.objectStore("new_budget");
 
   // add record to your store with add method
-  pizzaObjectStore.add(record);
+  budgetObjectStore.add(record);
 }
 
 function uploadBudget() {
