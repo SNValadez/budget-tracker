@@ -3,10 +3,22 @@ let myChart;
 
 
 
-fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction")
+fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction", 
+  {
+    method: 'post',
+    headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json'
+  },
+  })
   .then(response => {
     return response.json();
   })
+  .catch(error=> {
+    console.log(error)
+  })
+   
+  
   .then(data => {
     console.log(data);
     // save db data on global variable
