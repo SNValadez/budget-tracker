@@ -6,6 +6,10 @@ let myChart;
 fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction", 
   {
     method: 'post',
+    body: {
+      name: "pizza",
+      value: 20
+    },
     headers: {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/json'
