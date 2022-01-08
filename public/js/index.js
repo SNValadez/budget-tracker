@@ -2,16 +2,17 @@ let transactions = [];
 let myChart;
 
 
-
+let object = {
+  "name":"pizza",
+  "value": "6"
+};
 fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction", 
   {
     method: 'post',
-    body: {
-      "name": "pizza",
-      "value": 20
-    },
+    body: JSON.stringify(object),
+    
     headers: {
-    'Accept': 'application/json, text/plain, */*',
+    'Accept': 'application/json',
     'Content-Type': 'application/json'
   },
   })
