@@ -3,7 +3,7 @@ let myChart;
 
 
 
-fetch("/api/transaction")
+fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction")
   .then(response => {
     return response.json();
   })
