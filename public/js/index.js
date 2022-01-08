@@ -8,6 +8,7 @@ fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction")
     return response.json();
   })
   .then(data => {
+    console.log(data);
     // save db data on global variable
     transactions = data;
 
