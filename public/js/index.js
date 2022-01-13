@@ -2,20 +2,23 @@ let transactions = [];
 let myChart;
 
 
-let object = {
-  "name":"pizza",
-  "value": "6"
-};
-fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction", 
-  {
-    method: 'post',
-    body: JSON.stringify(object),
+// let object = {
+//   "name":"pizza",
+//   "value": "6"
+// };
+   // fetch("https://sleepy-cove-34074.herokuapp.com/api/transaction", 
+  // {
+  //   method: 'post',
+  //   body: JSON.stringify(object),
     
-    headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  },
-  })
+  //   headers: {
+  //   'Accept': 'application/json',
+  //   'Content-Type': 'application/json'
+  // },
+  // })
+
+
+  fetch("api/transaction")
   .then(response => {
     return response.json();
   })
